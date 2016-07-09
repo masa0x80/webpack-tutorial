@@ -1,0 +1,15 @@
+{
+  "name": "webpack-tutorial",
+  "version": "0.1.0",
+  "description": "webpack tutorial",
+  "main": "entry.js",
+  "dependencies": {
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kimura Masayuki",
+  "license": "MIT"
+}
