@@ -1,17 +1,33 @@
+const webpack = require('webpack');
+
 module.exports = {
-  entry: './entry.js',
+  context: __dirname + '/src',
+  entry: {
+    javascript: './entry.js'
+  },
   output: {
-    path:     __dirname,
+    path:     __dirname + '/public',
     filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: 'dist',
+    port:        3000
   },
   module: {
     loaders: [
       {
-        test: /\.css$/,
+        test:   /\.css$/,
         loader: 'style!css'
       }, {
-        test: /\.scss$/,
+        test:    /\.scss$/,
         loaders: ['style', 'css', 'sass']
+      }, {
+        test:    /\.js$/,
+        exclude: /node_modules/,
+        loader:  'babel-loader',
+        query: {
+          cacheDirectory: true
+        }
       }
     ]
   }
