@@ -20,7 +20,8 @@
     "babel-preset-stage-0": "^6.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch -d & webpack-dev-server --progress --colors"
   },
   "author": "Kimura Masayuki",
   "license": "MIT"
